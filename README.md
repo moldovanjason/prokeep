@@ -5,4 +5,4 @@ to have a successfull login
 email: "eve.holt@reqres.in"
 password: "cityslicka"
 
-for failed login, write any other email.
+for failed login, write any other email or password.
