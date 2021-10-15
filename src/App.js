@@ -1,27 +1,27 @@
 import axios from 'axios';
+import "bootstrap/dist/css/bootstrap.css";
 import React, {useState} from 'react';
 import './App.css';
 
 function App() {
-  const [email, setEmail] = useState('')
-  const [password, setPassword] = useState('')
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
 
-  const handleButton = (e) => {
-    axios.post("https://requres.in/api/register").then((response) => {
-      console.log(response);
-    }).catch((err) => {
-      console.log(err);
-    });
-  };
+  const loginUser = async (e) => {
+      await axios.post("https://requres.in/api/login", {
+        email: email,
+        password: password,
+      });
+      // e.preventDefault();
+  }
 
   return (
     <div className="App">
       <h1>Log In!</h1>
-      <form action="">
+      <form>
         <div>
           <div className="inputTitle">Email</div>
           <input
-            // autoComplete="off"
             type="email"
             placeholder="Johndoe@gmail.com"
             onChange={(e) => {
@@ -44,7 +44,7 @@ function App() {
         </div>
         <button
           type="submit"
-          onClick={() => handleButton()}
+          onClick={() => loginUser()}
           disabled={!email || !password}
         >
           Log In
