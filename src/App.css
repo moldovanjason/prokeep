@@ -20,7 +20,7 @@ h1{
 
 input{
   height:50px;
-  width:365px ;
+  width:360px ;
   border:1px solid rgb(165, 165, 165) ;
   border-radius: 3px;
   margin: auto;
@@ -39,11 +39,9 @@ input:focus{
 
 }
 
-
-
 button{
   height: 40px;
-  width: 376px;
+  width: 360px;
   margin: auto;
   background: rgb(0, 132, 255);
   border: none;
@@ -54,7 +52,7 @@ button{
 
 button:hover{
   height: 40px;
-  width: 376px;
+  width: 360px;
   margin: auto;
   background: rgb(0, 124, 240);
   border: none;
@@ -75,3 +73,6 @@ button[disabled]{
   color: gray;
 }
 
+form{
+  width: 220px;
+}
